@@ -15,7 +15,7 @@ function MockApiMiddleware (route, options) {
 	}, options);
 
 	return {
-		route: route, // '/mockapi',
+		route: route,
 		handle: function (req, res, next) {
 			let jsonData;
 			let mockUrlPath = url.parse(req.url).pathname;
