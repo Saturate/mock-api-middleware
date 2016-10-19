@@ -1,0 +1,19 @@
+{
+    "extends": "eslint:recommended",
+    "root": true,
+    "parserOptions": {
+        "ecmaVersion": 6
+    },
+    "env": {
+        "node": true,
+        "es6": true
+    },
+    "rules": {
+        "indent": ["warn", "tab", { "SwitchCase": 1 }],
+        "semi": ["warn", "always"],
+        "quotes": ["warn", "single"],
+        "no-console": 0
+    },
+    "globals": {
+    }
+}
