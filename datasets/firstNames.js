@@ -1,6 +1,7 @@
 module.exports = [
 	'Rufus',
 	'Allan',
+	'Søren',
 	'Josh',
 	'Anne',
 	'Anne-Mette',
