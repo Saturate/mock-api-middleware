@@ -4,6 +4,7 @@ const url = require('url');
 const dummyjson = require('dummy-json');
 const prettyBytes = require('pretty-bytes');
 const chalk = require('chalk');
+const extendedMockData = require('./mockdata.js');
 
 function MockApiMiddleware (route, options) {
 	'use strict';
@@ -56,7 +57,7 @@ function MockApiMiddleware (route, options) {
 			// Will try to parse dummyjson, if it's not sucessfull show an error
 			// This is most likely a mistake with the file, and has to be fixed.
 			try {
-				jsonData = JSON.parse(dummyjson.parse(jsonData));
+				jsonData = JSON.parse(dummyjson.parse(jsonData, { mockdata: extendedMockData }));
 			} catch (error) {
 				showError('Could not parse Mock-JSON: ' + mockJsonPath, error);
 				return;
