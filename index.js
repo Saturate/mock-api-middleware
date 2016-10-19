@@ -12,7 +12,8 @@ function MockApiMiddleware (route, options) {
 	const logPrefix = '[' + chalk.blue('MockApi') + '] ';
 	const settings = Object.assign({
 		mockPath: './mocks/',
-		jsonContentType: 'application/json;charset=utf-8'
+		jsonContentType: 'application/json;charset=utf-8',
+		dataset: extendedMockData
 	}, options);
 
 	return {
@@ -57,7 +58,7 @@ function MockApiMiddleware (route, options) {
 			// Will try to parse dummyjson, if it's not sucessfull show an error
 			// This is most likely a mistake with the file, and has to be fixed.
 			try {
-				jsonData = JSON.parse(dummyjson.parse(jsonData, { mockdata: extendedMockData }));
+				jsonData = JSON.parse(dummyjson.parse(jsonData, { mockdata: settings.dataset }));
 			} catch (error) {
 				showError('Could not parse Mock-JSON: ' + mockJsonPath, error);
 				return;

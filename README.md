@@ -32,6 +32,7 @@ browserSync.init({
 This module accepts the following options
 
 - **mockPath**: Path to mock files
+- **dataset**: Override datasets with this, accepts an object. Will only override if the sames keys are defined.
 
 
 ## Mocking
