@@ -33,7 +33,7 @@ This module accepts the following options
 
 - **mockPath**: Path to mock files
 - **dataset**: Override datasets with this, accepts an object. Will only override if the sames keys are defined.
-
+- **helpers**: Your own helpers which are described in "[writing-your-own-helpers](https://github.com/webroo/dummy-json#writing-your-own-helpers)" of [dummy-json](https://github.com/webroo/dummy-json)
 
 ## Mocking
 To mock an API or a service. All you need is a folder and some files.
