@@ -16,7 +16,7 @@
     "browsersync"
   ],
   "author": "Allan Kimmer Jensen",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/Saturate/mock-api-middleware/issues"
   },
