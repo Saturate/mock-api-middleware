@@ -4,7 +4,7 @@
   "description": "Create Mock API'",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "eslint ."
   },
   "repository": {
     "type": "git",
@@ -25,5 +25,8 @@
     "chalk": "^1.1.3",
     "dummy-json": "^1.0.1",
     "pretty-bytes": "^4.0.2"
+  },
+  "devDependencies": {
+    "eslint": "^4.1.1"
   }
 }
