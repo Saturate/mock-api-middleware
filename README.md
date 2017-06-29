@@ -1,4 +1,10 @@
 # mock-api-middleware
+[![npm version](https://img.shields.io/npm/v/mock-api-middleware.svg?style=flat-square)](http://npmjs.org/mock-api-middleware)
+[![npm downloads](https://img.shields.io/npm/dm/mock-api-middleware.svg?style=flat-square)](http://npmjs.org/mock-api-middleware)
+[![Dependency Status](https://img.shields.io/david/PentiaLabs/generator-helix.svg?style=flat-square)](https://david-dm.org/Saturate/mock-api-middleware)
+[![License](https://img.shields.io/npm/l/mock-api-middleware.svg?style=flat-square)](https://github.com/PentiaLabsmock-api-middleware/blob/master/LICENSE)
+
+
 Middleware for NodeJS, BrowserSync ect. for creating API Mock's fast.
 You can shorten it MAM, like the sound you say when food is delicious.
 
