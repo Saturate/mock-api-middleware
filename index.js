@@ -58,7 +58,7 @@ function MockApiMiddleware (route, options) {
 			// Will try to parse dummyjson, if it's not sucessfull show an error
 			// This is most likely a mistake with the file, and has to be fixed.
 			try {
-				jsonData = JSON.parse(dummyjson.parse(jsonData, { mockdata: settings.dataset }));
+				jsonData = JSON.parse(dummyjson.parse(jsonData, { mockdata: settings.dataset, helpers: settings.helpers }));
 			} catch (error) {
 				showError('Could not parse Mock-JSON: ' + mockJsonPath, error);
 				return;
