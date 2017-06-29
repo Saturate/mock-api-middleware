@@ -1,6 +1,6 @@
 {
   "name": "mock-api-middleware",
-  "version": "0.0.3",
+  "version": "0.1.3",
   "description": "Create Mock API'",
   "main": "index.js",
   "scripts": {
