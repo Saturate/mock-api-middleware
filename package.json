@@ -1,6 +1,6 @@
 {
   "name": "mock-api-middleware",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Create Mock API'",
   "main": "index.js",
   "scripts": {
@@ -22,8 +22,8 @@
   },
   "homepage": "https://github.com/Saturate/mock-api-middleware#readme",
   "dependencies": {
-    "chalk": "^1.1.3",
-    "dummy-json": "^1.0.1",
+    "chalk": "^2.3.0",
+    "dummy-json": "^2.0.0",
     "pretty-bytes": "^4.0.2"
   },
   "devDependencies": {
