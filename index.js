@@ -39,7 +39,7 @@ function MockApiMiddleware (route, options) {
 				}));
 
 				// Continue
-				next();
+				return;
 			}
 
 			// Tries to get a mock template, if it does not exist we check for a catch all template
@@ -72,7 +72,6 @@ function MockApiMiddleware (route, options) {
 			res.setHeader('Content-Type', settings.jsonContentType);
 			res.end(JSON.stringify(jsonData));
 
-			next();
 		}
 	};
 }
