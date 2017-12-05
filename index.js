@@ -18,7 +18,7 @@ function MockApiMiddleware (route, options) {
 
 	return {
 		route: route,
-		handle: function (req, res, next) {
+		handle: function (req, res) {
 			let jsonData;
 			let mockUrlPath = url.parse(req.url).pathname;
 			let mockJsonPath = path.join(settings.mockPath + mockUrlPath + '.' + req.method + '.json');
@@ -39,7 +39,7 @@ function MockApiMiddleware (route, options) {
 				}));
 
 				// Continue
-				next();
+				return;
 			}
 
 			// Tries to get a mock template, if it does not exist we check for a catch all template
@@ -72,7 +72,6 @@ function MockApiMiddleware (route, options) {
 			res.setHeader('Content-Type', settings.jsonContentType);
 			res.end(JSON.stringify(jsonData));
 
-			next();
 		}
 	};
 }
