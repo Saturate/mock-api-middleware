@@ -23,6 +23,7 @@ function MockApiMiddleware (route, options) {
 			let mockUrlPath = url.parse(req.url).pathname;
 			let mockJsonPath = path.join(settings.mockPath + mockUrlPath + '.' + req.method + '.json');
 			let dirCatchAll = path.join(require('path').dirname(mockJsonPath)  + '/_.' + req.method + '.json');
+			let dirCatchAllParent = path.join(require('path').dirname(mockJsonPath)  + '../_.' + req.method + '.json');
 
 			function showError (message, errors) {
 				// Print the error in the nodejs console
@@ -50,8 +51,12 @@ function MockApiMiddleware (route, options) {
 				try {
 					jsonData = fs.readFileSync(dirCatchAll, 'utf8');
 				} catch (error2) {
-					showError('Could not find: ' + mockJsonPath + ' or ' + dirCatchAll, [error, error2]);
-					return;
+					try {
+						jsonData = fs.readFileSync(dirCatchAllParent, 'utf8');
+					} catch (error3) {
+						showError('Could not find: ' + mockJsonPath + ' or ' + dirCatchAll + ' or ' + dirCatchAllParent, [error, error2, error2]);
+						return;
+					}
 				}
 			}
 
